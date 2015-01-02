@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nowhug.me/categories/index.html</loc>
+    <lastmod>2015-01-02T17:00:33.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nowhug.me/tags/index.html</loc>
+    <lastmod>2015-01-02T16:59:44.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nowhug.me/New-Page/index.html</loc>
     <lastmod>2015-01-02T16:28:15.000Z</lastmod>
   </url>
