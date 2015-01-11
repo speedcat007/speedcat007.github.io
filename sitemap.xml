@@ -2,28 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://nowhug.me/2015/01/11/Just-Hello/</loc>
-    <lastmod>2015-01-11T10:58:37.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://nowhug.me/2015/01/11/hello-world/</loc>
-    <lastmod>2015-01-11T10:25:09.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://nowhug.me/new-page/index.html</loc>
-    <lastmod>2015-01-11T09:58:40.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://nowhug.me/New-Page/index.html</loc>
-    <lastmod>2015-01-11T09:53:13.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://nowhug.me/new-page/index-1.html</loc>
-    <lastmod>2015-01-11T09:51:35.000Z</lastmod>
+    <loc>http://nowhug.me/2015/01/11/%E6%8C%81%E4%B9%8B%E4%BB%A5%E6%81%92/</loc>
+    <lastmod>2015-01-11T15:32:50.000Z</lastmod>
   </url>
   
   <url>
@@ -34,11 +14,6 @@
   <url>
     <loc>http://nowhug.me/tags/index.html</loc>
     <lastmod>2015-01-02T16:59:44.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://nowhug.me/2015/01/03/New-Post/</loc>
-    <lastmod>2015-01-02T16:27:46.000Z</lastmod>
   </url>
   
 </urlset>

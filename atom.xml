@@ -4,7 +4,7 @@
   <subtitle><![CDATA[make your heart fly ...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://nowhug.me/"/>
-  <updated>2015-01-11T15:22:28.815Z</updated>
+  <updated>2015-01-11T15:33:09.585Z</updated>
   <id>http://nowhug.me/</id>
   
   <author>
@@ -15,84 +15,19 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://nowhug.me/2015/01/11/hello-world/"/>
-    <id>http://nowhug.me/2015/01/11/hello-world/</id>
-    <published>2015-01-11T10:25:09.000Z</published>
-    <updated>2015-01-11T10:25:09.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html">Deployment</a></p>
+    <title><![CDATA[持之以恒 ! Now or Never]]></title>
+    <link href="http://nowhug.me/2015/01/11/%E6%8C%81%E4%B9%8B%E4%BB%A5%E6%81%92/"/>
+    <id>http://nowhug.me/2015/01/11/持之以恒/</id>
+    <published>2015-01-11T15:28:30.000Z</published>
+    <updated>2015-01-11T15:32:50.000Z</updated>
+    <content type="html"><![CDATA[<p>拟定目标,有所作为,持之以恒!,&lt;% link nowhug.me “before i die” %&gt;</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for m]]>
+    <![CDATA[<p>拟定目标,有所作为,持之以恒!,&lt;% link nowhug.me “before i die” %&gt;</p>
+]]>
     </summary>
     
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Just Hello]]></title>
-    <link href="http://nowhug.me/2015/01/11/Just-Hello/"/>
-    <id>http://nowhug.me/2015/01/11/Just-Hello/</id>
-    <published>2015-01-11T09:59:51.000Z</published>
-    <updated>2015-01-11T10:58:37.000Z</updated>
-    <content type="html"><![CDATA[<a id="more"></a>
-
-<p>你是我的小苹果<br><a id="more"></a></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">小雅小平郭</div></pre></td></tr></table></figure>
-
-<blockquote>
-
-<p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io">http://devdocs.io</a></p>
-<footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752">twitter.com/devdocs/status/&hellip;</a></cite></footer></blockquote>
-
-
-<blockquote class="pullquote ">
-
-<p>content<a href="www.baidu.com">baidu</a></p>
-</blockquote>
-
-]]></content>
-    <summary type="html">
-    <![CDATA[<!-- more -->
-
-<p>你是我的小苹果<br>]]>
-    
-    </summary>
-    
-      <category term="Hello" scheme="http://nowhug.me/tags/Hello/"/>
-    
-      <category term="world" scheme="http://nowhug.me/tags/world/"/>
-    
-      <category term="android" scheme="http://nowhug.me/categories/android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[New Post]]></title>
-    <link href="http://nowhug.me/2015/01/03/New-Post/"/>
-    <id>http://nowhug.me/2015/01/03/New-Post/</id>
-    <published>2015-01-02T16:27:46.000Z</published>
-    <updated>2015-01-02T16:27:46.000Z</updated>
-    <content type="html"><![CDATA[]]></content>
-    <summary type="html">
-    <![CDATA[]]>
-    </summary>
+      <category term="now me" scheme="http://nowhug.me/tags/now-me/"/>
     
   </entry>
   
