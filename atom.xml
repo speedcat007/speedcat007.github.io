@@ -4,7 +4,7 @@
   <subtitle><![CDATA[make your heart fly ...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://nowhug.me/"/>
-  <updated>2015-01-11T15:36:32.064Z</updated>
+  <updated>2015-01-13T10:13:32.108Z</updated>
   <id>http://nowhug.me/</id>
   
   <author>
@@ -13,6 +13,60 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Markdown简明教程]]></title>
+    <link href="http://nowhug.me/2015/01/13/markdown%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/"/>
+    <id>http://nowhug.me/2015/01/13/markdown简明教程/</id>
+    <published>2015-01-13T08:05:17.000Z</published>
+    <updated>2015-01-13T10:13:27.000Z</updated>
+    <content type="html"><![CDATA[<p> <strong>Markdown</strong> 是一种轻量级标记语言，创始人为約翰·格魯伯（John Gruber）。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档.这种语言吸收了很多在电子邮件中已有的纯文本标记的特性.<br> 本文介绍Markdown常用语法,内容虽少,但都是最常用的基本语法,并且用hexo编写post时都可以直接使用.</p>
+<h3 id="换行">换行</h3>
+<p>可以在行尾输入两个或以上的空格，然后回车。 这样插入换行十分麻烦，但是,若每个换行都转换为'/<br>',在 Markdown中显然并不合适，所以只有在你确定你需要时,手动添加。在hexo中直接输入/也是可以的.</p>
+<h3 id="强调">强调</h3>
+<p>注: <strong><em>'*'与'_'效果相同.</em></strong></p>
+<ul>
+<li>*content*与_content_表示斜体</li>
+<li>**content**与__content__表示粗体</li>
+<li>***content***与___content___表示斜体并加粗<br><br><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">*</span>The devil is in the details.<span class="keyword">*</span></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span>The devil is in the details.<span class="keyword">*</span><span class="keyword">*</span></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>The devil is in the details.<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></div></pre></td></tr></table></figure><br><em>The devil is in the details.</em><br><strong>The devil is in the details.</strong><br><strong><em>The devil is in the details.</em></strong><br><br><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">_The devil <span class="keyword">is</span> <span class="keyword">in</span> the details._</div><div class="line">__The devil <span class="keyword">is</span> <span class="keyword">in</span> the details.__</div><div class="line">___The devil <span class="keyword">is</span> <span class="keyword">in</span> the details.___</div></pre></td></tr></table></figure><br><em>The devil is in the details.</em><br><strong>The devil is in the details.</strong><br><strong><em>The devil is in the details.</em></strong></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p> <strong>Markdown</strong> 是一种轻量级标记语言，创始人为約翰·格魯伯（John Gruber）。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档.这种语言吸收了很多在电子邮件中已有的纯文本标记的特性.<b]]>
+    </summary>
+    
+      <category term="markdown" scheme="http://nowhug.me/tags/markdown/"/>
+    
+      <category term="语法" scheme="http://nowhug.me/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="hexo" scheme="http://nowhug.me/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Open Source Mirrors(高校开源镜像站)]]></title>
+    <link href="http://nowhug.me/2015/01/13/Open-Source-Mirrors/"/>
+    <id>http://nowhug.me/2015/01/13/Open-Source-Mirrors/</id>
+    <published>2015-01-13T05:44:46.000Z</published>
+    <updated>2015-01-13T07:47:23.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://mirrors.ustc.edu.cn" target="_blank" rel="external">中国科学技术大学</a><br>mirrors.ustc.edu.cn</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="https://mirrors.ustc.edu.cn" target="_blank" rel="external">中国科学技术大学</a><br>mirrors.ustc.edu.cn</p>
+]]>
+    </summary>
+    
+      <category term="source" scheme="http://nowhug.me/tags/source/"/>
+    
+      <category term="mirrors" scheme="http://nowhug.me/tags/mirrors/"/>
+    
+      <category term="源" scheme="http://nowhug.me/tags/%E6%BA%90/"/>
+    
+      <category term="镜像" scheme="http://nowhug.me/tags/%E9%95%9C%E5%83%8F/"/>
+    
+      <category term="OS &amp; software" scheme="http://nowhug.me/categories/OS-software/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[持之以恒 ! Now or Never]]></title>

@@ -339,7 +339,7 @@ article {
   margin: 0;
 }
 
-/* Code, Pre [landscape](http://goo.gl/hnwXeD) */
+/* Code, Pre [landscape](http://goo.gl/hnwXeD) color:333*/
 .article-entry pre,
 .article-entry .highlight {
   background: #494949;
@@ -349,7 +349,7 @@ article {
   border-color: #ddd;
   border-width: 1px 0;
   overflow: auto;
-  color: #333;
+  color: #F7F7F7;
   line-height: 22.400000000000002px;
   font-size: 14px;
   text-shadow: none;
