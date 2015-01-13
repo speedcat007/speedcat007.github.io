@@ -76,7 +76,7 @@
   </div>
 </div>
 
-<div class="tagcloud" id="fbox-tagcloud" style="margin:10px; display:none; overflow: hidden"><a href="../Hello" style="font-size: 12.00px;">Hello</a><a href="../hexo" style="font-size: 24.00px;">hexo</a><a href="../markdown" style="font-size: 24.00px;">markdown</a><a href="../mirrors" style="font-size: 24.00px;">mirrors</a><a href="../now-me" style="font-size: 12.00px;">now me</a><a href="../now-me-ok" style="font-size: 24.00px;">now me, ok</a><a href="../source" style="font-size: 24.00px;">source</a><a href="../world" style="font-size: 12.00px;">world</a><a href="../源" style="font-size: 24.00px;">源</a><a href="" style="font-size: 24.00px;">语法</a><a href="../镜像" style="font-size: 24.00px;">镜像</a></div>
+<div class="tagcloud" id="fbox-tagcloud" style="margin:10px; display:none; overflow: hidden"><a href="../hexo" style="font-size: NaNpx;">hexo</a><a href="../markdown" style="font-size: NaNpx;">markdown</a><a href="../mirrors" style="font-size: NaNpx;">mirrors</a><a href="../now-me-ok" style="font-size: NaNpx;">now me, ok</a><a href="../source" style="font-size: NaNpx;">source</a><a href="../源" style="font-size: NaNpx;">源</a><a href="" style="font-size: NaNpx;">语法</a><a href="../镜像" style="font-size: NaNpx;">镜像</a></div>
 
   </header>
   <div id="main-content" class="wrap">
@@ -121,14 +121,153 @@
         
           <p> <strong>Markdown</strong> 是一种轻量级标记语言，创始人为約翰·格魯伯（John Gruber）。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档.这种语言吸收了很多在电子邮件中已有的纯文本标记的特性.<br> 本文介绍Markdown常用语法,内容虽少,但都是最常用的基本语法,并且用hexo编写post时都可以直接使用.</p>
 <h3 id="换行">换行</h3>
-<p>可以在行尾输入两个或以上的空格，然后回车。 这样插入换行十分麻烦，但是,若每个换行都转换为'/<br>',在 Markdown中显然并不合适，所以只有在你确定你需要时,手动添加。在hexo中直接输入/也是可以的.</p>
+<hr>
+<p>可以在行尾输入两个或以上的空格，然后回车。 这样插入换行十分麻烦，但是,若每个换行都转换为<code>&lt;br\&gt;</code>,在 Markdown中显然并不合适，所以只有在你确定你需要时,手动添加。在hexo中直接输入<code>&lt;br\&gt;</code>也是可以的.</p>
 <h3 id="强调">强调</h3>
-<p>注: <strong><em>'*'与'_'效果相同.</em></strong></p>
+<hr>
+<p>注:<strong><em>星号('*')与下划线('_')效果相同.</em></strong></p>
 <ul>
 <li>*content*与_content_表示斜体</li>
 <li>**content**与__content__表示粗体</li>
-<li>***content***与___content___表示斜体并加粗<br><br><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">*</span>The devil is in the details.<span class="keyword">*</span></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span>The devil is in the details.<span class="keyword">*</span><span class="keyword">*</span></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>The devil is in the details.<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></div></pre></td></tr></table></figure><br><em>The devil is in the details.</em><br><strong>The devil is in the details.</strong><br><strong><em>The devil is in the details.</em></strong><br><br><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">_The devil <span class="keyword">is</span> <span class="keyword">in</span> the details._</div><div class="line">__The devil <span class="keyword">is</span> <span class="keyword">in</span> the details.__</div><div class="line">___The devil <span class="keyword">is</span> <span class="keyword">in</span> the details.___</div></pre></td></tr></table></figure><br><em>The devil is in the details.</em><br><strong>The devil is in the details.</strong><br><strong><em>The devil is in the details.</em></strong></li>
+<li>***content***与___content___表示斜体并加粗
+
+</li>
 </ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">*</span>The devil is in the details.<span class="keyword">*</span></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span>The devil is in the details.<span class="keyword">*</span><span class="keyword">*</span></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>The devil is in the details.<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></div></pre></td></tr></table></figure>
+
+<p><em>The devil is in the details.</em><br><strong>The devil is in the details.</strong><br><strong><em>The devil is in the details.</em></strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">_The devil <span class="keyword">is</span> <span class="keyword">in</span> the details._</div><div class="line">__The devil <span class="keyword">is</span> <span class="keyword">in</span> the details.__</div><div class="line">___The devil <span class="keyword">is</span> <span class="keyword">in</span> the details.___</div></pre></td></tr></table></figure>
+
+<p><em>The devil is in the details.</em><br><strong>The devil is in the details.</strong><br><strong><em>The devil is in the details.</em></strong></p>
+<h3 id="水平分割线">水平分割线</h3>
+<hr>
+<p>要生成水平分割线，可以在单独一行里输入3个或以上的短横线、星号或者下划线实现。短横线和星号之间可以输入任意空格。以下每一行都产生一条水平分割线。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></div><div class="line">---</div><div class="line">_____</div></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<h3 id="引用">引用</h3>
+<hr>
+<p>引用只需要在被引用的内容段落开头加上右尖括号(‘&gt;’)即可。你可以选择只在开头加一个。也可以在每行前面都加一个，效果是一样的。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="input"><span class="prompt">&gt; 这是一个引用。这是第一行</span></span></div><div class="line">这是第二行。</div><div class="line">&gt;&gt; 这是一个嵌套的引用。这是第一行。</div><div class="line">这是第二行</div><div class="line"><span class="input"><span class="prompt">&gt;</span></span></div><div class="line">&gt; 外层引用的第三行。前面需要一个视觉上的空行表示内层嵌套的结束，空行前面的(<span class="string">'&gt;'</span>)可以有可以没有。</div></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这是一个引用。这是第一行<br>这是第二行。</p>
+<blockquote>
+<p>这是一个嵌套的引用。这是第一行。<br>这是第二行</p>
+</blockquote>
+<p>外层引用的第三行。前面需要一个视觉上的空行表示内层嵌套的结束，空行前面的(‘&gt;’)可以有可以没有。</p>
+</blockquote>
+<p>注:<strong><em>大部分组件都是以一个空行作为结束标志的.</em></strong></p>
+<h3 id="标题">标题</h3>
+<hr>
+<p>可以在标题内容前输入特定数量的井号(‘#’)来实现对应级别的HTML样式的标题(HTML提供六级标题)。例如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#一级标题</span></div><div class="line"><span class="preprocessor">##二级标题</span></div><div class="line"><span class="preprocessor">###三级标题</span></div><div class="line"><span class="preprocessor">####四级标题</span></div><div class="line"><span class="preprocessor">#####五级标题</span></div><div class="line"><span class="preprocessor">######六级标题</span></div></pre></td></tr></table></figure>
+
+<h1 id="一级标题">一级标题</h1>
+<h2 id="二级标题">二级标题</h2>
+<h3 id="三级标题">三级标题</h3>
+<h4 id="四级标题">四级标题</h4>
+<h5 id="五级标题">五级标题</h5>
+<h6 id="六级标题">六级标题</h6>
+<p>一级和二级标题还有一种写法：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">一级标题</div><div class="line">=<span class="ruby">========(三个或更多)</span></div><div class="line">二级标题</div><div class="line">-<span class="ruby">--------(三个或更多)</span></div></pre></td></tr></table></figure>
+
+<h1 id="一级标题-1">一级标题</h1>
+<h2 id="二级标题-1">二级标题</h2>
+<h3 id="列表">列表</h3>
+<hr>
+<h4 id="无序列表">无序列表</h4>
+<p>符号之后的空格不能少，-+*效果一样，但不能混合使用，混合后变为嵌套列表.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">嵌套列表符号之前和符号之后的空格都不能少,-+*可循环使用</div><div class="line">-<span class="ruby"> 无序列表</span></div><div class="line">-<span class="ruby"> 无序列表</span></div><div class="line"> + 嵌套列表</div><div class="line"> + 嵌套列表</div><div class="line">  * 再嵌套</div><div class="line">  * 再嵌套</div><div class="line"> + 嵌套列表</div><div class="line">-<span class="ruby"> 无序列表</span></div><div class="line">多行</div></pre></td></tr></table></figure>
+
+<ul>
+<li>无序列表</li>
+<li>无序列表 <ul>
+<li>嵌套列表</li>
+<li>嵌套列表</li>
+</ul>
+<ul>
+<li>再嵌套</li>
+<li>再嵌套</li>
+</ul>
+<ul>
+<li>嵌套列表</li>
+</ul>
+</li>
+<li>无序列表<br>多行</li>
+</ul>
+<h4 id="有序列表">有序列表</h4>
+<p>数字+’.’ 构成有序列表,数字可以无序但不可省略,点号之后的空格不可省略.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1. </span>有序列表</div><div class="line"><span class="bullet">2. </span>有序列表</div><div class="line"><span class="bullet">5. </span>有序列表</div><div class="line"><span class="bullet">8. </span>有序列表</div></pre></td></tr></table></figure>
+
+<ol>
+<li>有序列表</li>
+<li>有序列表</li>
+<li>有序列表</li>
+<li>有序列表</li>
+</ol>
+<h3 id="代码">代码</h3>
+<hr>
+<p>要在Markdown中插入代码，你有两种选择。 一种是把代码用反引号(`)(键盘上Esc键下面的键)包起，例如：</p>
+<p>夹杂着<code>一些代码</code>的文字内容<br>又或者以制表符或至少四个空格缩进的行，例如：</p>
+<pre><code>第一行代码
+第二行代码
+第三行代码
+</code></pre><p>后面一种用法会让Markdown保留所有的空白字符——而与之相反，一般情况下，Markdown会删除所有换行和空格，打乱原有的缩进和排版.</p>
+<p>在hexo中```和<code>{ % codeblock %}</code>与后面一种方法效果相同.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="escape">``</span><span class="escape">`</span></div><div class="line">code1</div><div class="line"><span class="escape">``</span><span class="escape">`</span></div><div class="line">{ <span class="var_expand">% codeblock %</span>}</div><div class="line">code2</div><div class="line">{ <span class="var_expand">% endcodeblock %</span>}</div></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">code1</div></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">code2</div></pre></td></tr></table></figure>
+
+<h3 id="连接">连接</h3>
+<hr>
+<h4 id="文字链接">文字链接</h4>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[<span class="link_label">链接文字</span>](<span class="link_url">链接地址</span>)</div><div class="line">[<span class="link_label">nowhug.me</span>](<span class="link_url">http://nowhug.me</span>)</div></pre></td></tr></table></figure>
+
+<p><a href="http://nowhug.me" target="_blank" rel="external">nowhug.me</a></p>
+<h4 id="图片链接">图片链接</h4>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![<span class="link_label">GitHub Mark</span>](<span class="link_url">http://github.global.ssl.fastly.net/images/modules/logos_page/GitHub-Mark.png "GitHub Mark"</span>)</div></pre></td></tr></table></figure>
+
+<p><img src="http://github.global.ssl.fastly.net/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Mark" title="GitHub Mark"></p>
+<h4 id="索引链接">索引链接</h4>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">先在内容行内插入以下内容：</div><div class="line">[<span class="link_label">链接文字</span>][<span class="link_reference">链接引用标签</span>]</div><div class="line">然后在段落的后面（或者文档的结尾）放上以下内容，就可以生成一个链接：</div><div class="line">[<span class="link_reference">链接引用标签</span>]:<span class="link_url"> 链接地址 "链接标题"</span><span class="link_url"></span></div><div class="line">[nowhug.me][1]<span class="link_url"></span></div><div class="line">![GitHub Octocat][2]<span class="link_url"></span></div><div class="line">[1]:http://speedcat007.github.io<span class="link_url"></span></div><div class="line">[2]:http://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png</div></pre></td></tr></table></figure>
+
+<p><a href="http://speedcat007.github.io" target="_blank" rel="external">nowhug.me</a></p>
+<p><img src="http://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png" alt="GitHub Octocat"></p>
+<h4 id="自动链接">自动链接</h4>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">尖括号</div><div class="line"><span class="tag">&lt;<span class="title">http:</span>//<span class="attribute">nowhug.me</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">shanleizhenzhiwo@gmail.com</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p><a href="http://nowhug.me" target="_blank" rel="external">http://nowhug.me</a></p>
+<p><a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#x73;&#104;&#x61;&#x6e;&#x6c;&#101;&#105;&#122;&#104;&#101;&#x6e;&#122;&#x68;&#105;&#119;&#x6f;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;">&#x73;&#104;&#x61;&#x6e;&#x6c;&#101;&#105;&#122;&#104;&#101;&#x6e;&#122;&#x68;&#105;&#119;&#x6f;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;</a></p>
+<h3 id="注释">注释</h3>
+<hr>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--注释--&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="转义字符">转义字符</h3>
+<hr>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Markdown中的转义字符为<span class="string">'\'</span>，转义的有：</div><div class="line"><span class="string">'\\'</span> 反斜杠</div><div class="line"><span class="string">'\`'</span> 反引号</div><div class="line"><span class="string">'\*'</span> 星号</div><div class="line"><span class="string">'\_'</span> 下划线</div><div class="line"><span class="string">'\{'</span> <span class="string">'\}'</span> 大括号</div><div class="line"><span class="string">'\['</span> <span class="string">'\]'</span> 中括号</div><div class="line"><span class="string">'\('</span> <span class="string">'\)'</span> 小括号</div><div class="line"><span class="string">'\#'</span> 井号</div><div class="line"><span class="string">'\+'</span> 加号</div><div class="line"><span class="string">'\-'</span> 减号</div><div class="line"><span class="string">'\.'</span> 英文句号</div><div class="line"><span class="string">'\!'</span> 感叹号</div></pre></td></tr></table></figure>
+
+<h3 id="参考文献">参考文献</h3>
+<hr>
+<ol>
+<li><a href="http://lutaf.com/markdown-simple-usage.htm" target="_blank" rel="external">Markdown简明语法</a></li>
+<li><a href="http://www.ituring.com.cn/article/3452" target="_blank" rel="external">Markdown之表格的处理</a></li>
+<li><a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="external">献给写作者的Markdown新手指南</a></li>
+<li><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">cmd Markdown编辑阅读器</a></li>
+<li><a href="http://www.ituring.com.cn/article/504" target="_blank" rel="external">Markdown语法解析详解版</a></li>
+<li><a href="http://www.ituring.com.cn/article/23" target="_blank" rel="external">怎样使用Markdown</a></li>
+<li><a href="http://www.jianshu.com/p/PpDNMG" target="_blank" rel="external">Markdown写作浅谈</a></li>
+<li><a href="http://equation85.github.io/blog/markdown-examples/" target="_blank" rel="external">Markdown语法示例</a></li>
+<li><a href="http://tool.oschina.net/commons?type=2" target="_blank" rel="external">HTML字符转义表</a></li>
+<li><a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown语法说明(简体中文版)</a></li>
+<li><a href="http://ibruce.info/2013/11/26/markdown/" target="_blank" rel="external">Markdown简明语法</a></li>
+</ol>
 
         
       </div>
