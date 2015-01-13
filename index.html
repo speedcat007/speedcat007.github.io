@@ -115,7 +115,27 @@
       </div></header>
       <div class="article-entry">
         
-          <p> <strong>Markdown</strong> 是一种轻量级标记语言，创始人为約翰·格魯伯（John Gruber）。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档.这种语言吸收了很多在电子邮件中已有的纯文本标记的特性.<br> 本文介绍Markdown常用语法,内容虽少,但都是最常用的基本语法,并且用hexo编写post时都可以直接使用.<br>
+          <p> <strong>Markdown</strong> 是一种轻量级标记语言，创始人为約翰·格魯伯（John Gruber）。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档.这种语言吸收了很多在电子邮件中已有的纯文本标记的特性.<br> 本文介绍Markdown常用语法,内容虽少,但都是最常用的基本语法,并且用hexo编写post时都可以直接使用.</p>
+<h3 id="换行">换行</h3>
+<hr>
+<p>可以在行尾输入两个或以上的空格，然后回车。 这样插入换行十分麻烦，但是,若每个换行都转换为<code>&lt;br\&gt;</code>,在 Markdown中显然并不合适，所以只有在你确定你需要时,手动添加。在hexo中直接输入<code>&lt;br\&gt;</code>也是可以的.</p>
+<h3 id="强调">强调</h3>
+<hr>
+<p>注:<strong><em>星号('*')与下划线('_')效果相同.</em></strong></p>
+<ul>
+<li>*content*与_content_表示斜体</li>
+<li>**content**与__content__表示粗体</li>
+<li>***content***与___content___表示斜体并加粗
+
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">*</span>The devil is in the details.<span class="keyword">*</span></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span>The devil is in the details.<span class="keyword">*</span><span class="keyword">*</span></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>The devil is in the details.<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></div></pre></td></tr></table></figure>
+
+<p><em>The devil is in the details.</em><br><strong>The devil is in the details.</strong><br><strong><em>The devil is in the details.</em></strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">_The devil <span class="keyword">is</span> <span class="keyword">in</span> the details._</div><div class="line">__The devil <span class="keyword">is</span> <span class="keyword">in</span> the details.__</div><div class="line">___The devil <span class="keyword">is</span> <span class="keyword">in</span> the details.___</div></pre></td></tr></table></figure>
+
+<p><em>The devil is in the details.</em><br><strong>The devil is in the details.</strong><br><strong><em>The devil is in the details.</em></strong></p>
+<p>
           <a href="http://nowhug.me/2015/01/13/markdown简明教程/">Read More</a>
         
       </div>
