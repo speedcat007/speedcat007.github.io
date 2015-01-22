@@ -4,7 +4,7 @@
   <subtitle><![CDATA[make your heart fly ...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://nowhug.me/"/>
-  <updated>2015-01-13T14:55:50.847Z</updated>
+  <updated>2015-01-22T07:29:04.203Z</updated>
   <id>http://nowhug.me/</id>
   
   <author>
@@ -13,6 +13,49 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[adb文件找不到问题]]></title>
+    <link href="http://nowhug.me/2015/01/22/adb%E6%96%87%E4%BB%B6%E6%89%BE%E4%B8%8D%E5%88%B0%E9%97%AE%E9%A2%98/"/>
+    <id>http://nowhug.me/2015/01/22/adb文件找不到问题/</id>
+    <published>2015-01-22T06:38:05.000Z</published>
+    <updated>2015-01-22T07:27:49.000Z</updated>
+    <content type="html"><![CDATA[<p>安装64位版本的Ubuntu 14.04后,安装android SDK时可能会出现adb文件找不到的问题(我的笔记本并未出现这个问题..),但ls后明显可以看到存在adb文件.</p>
+<p>经查阅发现是由于ubuntu高版本默认丢弃了ia32-libs包所造成的.</p>
+<p>以下提供两种可行解决方案,<strong><em>方案一可行,方案二待测</em></strong>,方案三已经过时.</p>
+<h4 id="方案一(2015-1-22可行)">方案一(2015.1.22可行)</h4>
+<hr>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo -<span class="keyword">i</span></div><div class="line"><span class="keyword">cd</span> /etc/apt/sources.<span class="keyword">list</span>.<span class="keyword">d</span> </div><div class="line"><span class="keyword">echo</span> <span class="string">"deb http://old-releases.ubuntu.com/ubuntu raring main restricted universe multiverse"</span> &gt;ia32-libs-raring.<span class="keyword">list</span></div><div class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></div><div class="line">apt-<span class="built_in">get</span> install ia32-libs</div></pre></td></tr></table></figure>
+
+<p>执行以上代码结束,成功安装ia32-libs后,最好<code>rm ia32-libs-raring.list</code>删除该文件,然后执行<code>sudo apt-get update</code>.</p>
+<h4 id="方案二(待测)">方案二(待测)</h4>
+<hr>
+<p>lib32z1是ia32-libs的替代包,直接安装该包代替.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> apt-get install lib32z1</div></pre></td></tr></table></figure>
+
+<h4 id="方案三(过时)">方案三(过时)</h4>
+<hr>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo -<span class="keyword">i</span></div><div class="line"><span class="keyword">cd</span> /etc/apt/sources.<span class="keyword">list</span>.<span class="keyword">d</span> </div><div class="line"><span class="keyword">echo</span> <span class="string">"deb http://archieve.ubuntu.com/ubuntu raring main restricted universe multiverse"</span> &gt;ia32-libs-raring.<span class="keyword">list</span></div><div class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></div><div class="line">apt-<span class="built_in">get</span> install ia32-libs</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>安装64位版本的Ubuntu 14.04后,安装android SDK时可能会出现adb文件找不到的问题(我的笔记本并未出现这个问题..),但ls后明显可以看到存在adb文件.</p>
+<p>经查阅发现是由于ubuntu高版本默认丢弃了ia32-libs包所造成的.</p>]]>
+    </summary>
+    
+      <category term="android studio" scheme="http://nowhug.me/tags/android-studio/"/>
+    
+      <category term="android SDK" scheme="http://nowhug.me/tags/android-SDK/"/>
+    
+      <category term="adb" scheme="http://nowhug.me/tags/adb/"/>
+    
+      <category term="Ubuntu 14.04" scheme="http://nowhug.me/tags/Ubuntu-14-04/"/>
+    
+      <category term="ia32-lib" scheme="http://nowhug.me/tags/ia32-lib/"/>
+    
+      <category term="64b" scheme="http://nowhug.me/tags/64b/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Markdown简明教程]]></title>
@@ -209,12 +252,31 @@
     <link href="http://nowhug.me/2015/01/13/Open-Source-Mirrors/"/>
     <id>http://nowhug.me/2015/01/13/Open-Source-Mirrors/</id>
     <published>2015-01-13T05:44:46.000Z</published>
-    <updated>2015-01-13T14:43:35.000Z</updated>
+    <updated>2015-01-22T07:28:57.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://mirrors.ustc.edu.cn" target="_blank" rel="external">中国科学技术大学</a><br><code>mirrors.ustc.edu.cn</code></p>
+<p><a href="http://mirrors.neusoft.edu.cn" target="_blank" rel="external">大连东软信息学院</a><br><code>mirrors.neusoft.edu.cn</code></p>
+<p><a href="http://mirror.neu.edu.cn" target="_blank" rel="external">东北大学</a><br><code>mirror.neu.edu.cn</code></p>
+<p><a href="http://mirror.dlut.edu.cn" target="_blank" rel="external">大连理工大学</a><br><code>mirror.dlut.edu.cn</code></p>
+<a id="more"></a>
+
+<p><a href="http://run.hit.edu.cn" target="_blank" rel="external">哈尔滨工业大学</a><br><code>run.hit.edu.cn</code></p>
+<p><a href="mirrors.tuna.tsinghua.edu.cn">清华大学</a><br><code>mirrors.tuna.tsing.edu.cn</code></p>
+<p><a href="http://mirror.bit.edu.cn" target="_blank" rel="external">北京理工大学</a><br><code>mirror.bit.edu.cn</code></p>
+<p><a href="http://mirror.bjts.edu.cn" target="_blank" rel="external">北京交通大学</a><br><code>mirror.bjtu.edu.cn</code></p>
+<p><a href="http://mirrors.hust.edu.cn" target="_blank" rel="external">华中科技大学</a><br><code>mirrors.hust.edu.cn</code></p>
+<p><a href="http://mirrors.xmu.edu.cn" target="_blank" rel="external">厦门大学</a><br><code>mirrors.xmu.edu.cn</code></p>
+<p><a href="http://mirrors.sysu.edu.cn" target="_blank" rel="external">中山大学</a><br><code>mirrors.sysuu.edu.cn</code></p>
+<p><a href="http://mirror.lzu.edu.cn" target="_blank" rel="external">兰州大学</a><br><code>mirror.lzu.edu.cn</code></p>
+<p><a href="http://mirror.tju.edu.cn" target="_blank" rel="external">天津大学</a><br><code>mirror.tju.edu.cn</code></p>
+<p><a href="http://mirrors.zju.edu.cn" target="_blank" rel="external">浙江大学</a><br><code>mirrors.zju.edu.cn</code></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><a href="https://mirrors.ustc.edu.cn" target="_blank" rel="external">中国科学技术大学</a><br><code>mirrors.ustc.edu.cn</code></p>
+<p><a href="http://mirrors.neusoft.edu.cn" target="_blank" rel="external">大连东软信息学院</a><br><code>mirrors.neusoft.edu.cn</code></p>
+<p><a href="http://mirror.neu.edu.cn" target="_blank" rel="external">东北大学</a><br><code>mirror.neu.edu.cn</code></p>
+<p><a href="http://mirror.dlut.edu.cn" target="_blank" rel="external">大连理工大学</a><br><code>mirror.dlut.edu.cn</code></p>
 ]]>
+    
     </summary>
     
       <category term="source" scheme="http://nowhug.me/tags/source/"/>

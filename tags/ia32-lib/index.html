@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tag: ia32-lib | ZERO Blog !</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <link rel="alternative" href="/atom.xml" title="ZERO Blog !" type="application/atom+xml">
+  
+  
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/pure-min.css" type="text/css">
+  <link rel="stylesheet" href="/css/biture.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header">
+    <div class="wrap">
+  <div class="inner">
+    <a class="brand" href="/">ZERO Blog !</a>
+    <a id="menu-toggle" href="#"><i class="fa fa-bars"></i></a>
+<ul class="nav-menu">
+
+
+    <li><a href="/">home</a></li>
+
+
+
+    <li><a href="/tags">tags</a></li>
+
+
+
+    <li><a href="/categories">categories</a></li>
+
+
+
+    <li><a href="/photo">photo</a></li>
+
+
+</ul>
+
+<ul class="nav-menu ext-menu">
+
+
+    <li><a href="//github.com/speedcat007/">github</a></li>
+
+
+
+    <li><a href="//zespia.tw/hexo/">hexo</a></li>
+
+
+
+  <li><a href="#">theme</a>
+    <ul class="sub-menu">
+
+      <li><a href="//github.com/kywk/hexo-theme-biture">biture</a></li>
+
+      <li><a href="//github.com/tommy351/hexo-theme-landscape">landscape</a></li>
+
+      <li><a href="//github.com/tommy351/hexo-theme-light">light</a></li>
+
+    </ul>
+  </li>
+
+
+  <li><a class="various" href="#fbox-tagcloud">tags</a></li>
+</ul>
+</div>
+
+  </div>
+</div>
+
+<div class="tagcloud" id="fbox-tagcloud" style="margin:10px; display:none; overflow: hidden"><a href="../64b" style="font-size: NaNpx;">64b</a><a href="../Ubuntu-14-04" style="font-size: NaNpx;">Ubuntu 14.04</a><a href="../adb" style="font-size: NaNpx;">adb</a><a href="../android-SDK" style="font-size: NaNpx;">android SDK</a><a href="../android-studio" style="font-size: NaNpx;">android studio</a><a href="../hexo" style="font-size: NaNpx;">hexo</a><a href="" style="font-size: NaNpx;">ia32-lib</a><a href="../markdown" style="font-size: NaNpx;">markdown</a><a href="../mirrors" style="font-size: NaNpx;">mirrors</a><a href="../now-me-ok" style="font-size: NaNpx;">now me, ok</a><a href="../source" style="font-size: NaNpx;">source</a><a href="../源" style="font-size: NaNpx;">源</a><a href="../语法" style="font-size: NaNpx;">语法</a><a href="../镜像" style="font-size: NaNpx;">镜像</a></div>
+
+  </header>
+  <div id="main-content" class="wrap">
+  <div class="inner">
+    
+<!--<h4 class="archive-title tag">tag: ia32-lib</h4>-->
+
+
+  
+    <article class="post">
+    <div class="pure-g">
+    <!-- article: meta -->
+    <div class="pure-u-1-12 article-meta">
+      <div class="date"><time datetime="2015-01-22T06:38:05.000Z">
+        <div class="day">22</div>
+        <div class="month">1月 2015</div>
+      </time></div>
+      <div class="article-tags">
+        
+  
+    <a href='/tags/android-studio/' class='pure-button pull-right' style='margin:3px;'>android studio</a>
+  
+    <a href='/tags/android-SDK/' class='pure-button pull-right' style='margin:3px;'>android SDK</a>
+  
+    <a href='/tags/adb/' class='pure-button pull-right' style='margin:3px;'>adb</a>
+  
+    <a href='/tags/Ubuntu-14-04/' class='pure-button pull-right' style='margin:3px;'>Ubuntu 14.04</a>
+  
+    <a href='/tags/ia32-lib/' class='pure-button pull-right' style='margin:3px;'>ia32-lib</a>
+  
+    <a href='/tags/64b/' class='pure-button pull-right' style='margin:3px;'>64b</a>
+  
+
+
+      </div>
+    </div>
+
+    <!-- article: main -->
+    <div class="pure-u-11-12">
+      <header><div class="article-title">
+        
+  
+    <h1 class="title"><a href="/2015/01/22/adb文件找不到问题/">adb文件找不到问题</a></h1>
+  
+
+      </div></header>
+      <div class="article-entry">
+        
+          <p>安装64位版本的Ubuntu 14.04后,安装android SDK时可能会出现adb文件找不到的问题(我的笔记本并未出现这个问题..),但ls后明显可以看到存在adb文件.</p>
+<p>经查阅发现是由于ubuntu高版本默认丢弃了ia32-libs包所造成的.</p>
+<p>以下提供两种可行解决方案,<strong><em>方案一可行,方案二待测</em></strong>,方案三已经过时.</p>
+<h4 id="方案一(2015-1-22可行)">方案一(2015.1.22可行)</h4>
+<hr>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo -<span class="keyword">i</span></div><div class="line"><span class="keyword">cd</span> /etc/apt/sources.<span class="keyword">list</span>.<span class="keyword">d</span> </div><div class="line"><span class="keyword">echo</span> <span class="string">"deb http://old-releases.ubuntu.com/ubuntu raring main restricted universe multiverse"</span> &gt;ia32-libs-raring.<span class="keyword">list</span></div><div class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></div><div class="line">apt-<span class="built_in">get</span> install ia32-libs</div></pre></td></tr></table></figure>
+
+<p>执行以上代码结束,成功安装ia32-libs后,最好<code>rm ia32-libs-raring.list</code>删除该文件,然后执行<code>sudo apt-get update</code>.</p>
+<h4 id="方案二(待测)">方案二(待测)</h4>
+<hr>
+<p>lib32z1是ia32-libs的替代包,直接安装该包代替.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> apt-get install lib32z1</div></pre></td></tr></table></figure>
+
+<h4 id="方案三(过时)">方案三(过时)</h4>
+<hr>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo -<span class="keyword">i</span></div><div class="line"><span class="keyword">cd</span> /etc/apt/sources.<span class="keyword">list</span>.<span class="keyword">d</span> </div><div class="line"><span class="keyword">echo</span> <span class="string">"deb http://archieve.ubuntu.com/ubuntu raring main restricted universe multiverse"</span> &gt;ia32-libs-raring.<span class="keyword">list</span></div><div class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></div><div class="line">apt-<span class="built_in">get</span> install ia32-libs</div></pre></td></tr></table></figure>
+
+
+        
+      </div>
+      <footer><div class="article-comment">
+        
+
+      </div></footer>
+    </div>
+  </div>
+</article>
+
+  
+
+  <div class="pure-g-r bitpager">
+  <div class="pure-u-1-12"></div>
+  <div class="pure-u-1-4">
+    
+  </div>
+  <div class="pure-u-5-12"></div>
+  <div class="pure-u-1-4">
+    
+  </div>
+</div>
+
+
+
+
+  </div>
+  </div>
+  <footer id="footer">
+    <div class="wrap">
+  <div class="inner" style="text-align: center">
+    
+    &copy; 2015 speedcat007 All Rights Reserved
+    
+
+    / <a href="https://github.com/kywk/hexo-theme-biture">biture</a> for <a href="http://zespia.tw/hexo/">hexo</a>
+    / developed by <a href="http://kywk.github.io/moco/">MooCow (kywk)</a>.
+  </div>
+</div>
+
+  </footer>
+<!-- Le javascript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+<!-- Responsive menu -->
+<script>
+$(document).ready(function() {
+  $("#menu-toggle").click(function(event) {
+    event.preventDefault();
+    if ($(this).hasClass("isShow")) {
+      $("#header").css({position: "fixed"});
+      $("ul.nav-menu").hide();
+      $(this).removeClass("isShow");
+    } else {
+      $("#header").css({position: "static"});
+      $("ul.nav-menu").show();
+      $("html, body").scrollTop(0);
+      $(this).addClass("isShow");
+    }
+    return false;
+  });
+
+  $(window).resize(function() {
+    if ($(window).width() > 700) {
+      $("ul.nav-menu").removeAttr('style');
+    }
+  });
+
+});
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/package/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/package/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript">
+(function($){
+  $(".fancybox").fancybox();
+  $(".various").fancybox({
+    maxWidth  : 800,
+    maxHeight : 600,
+    fitToView : false,
+    width   : '70%',
+    height    : '70%',
+    autoSize  : true,
+    closeClick  : false,
+    openEffect  : 'none',
+    closeEffect : 'none'
+  });
+})(jQuery);
+</script>
+
+
+</body>
+</html>

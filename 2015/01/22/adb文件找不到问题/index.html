@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>持之以恒 ! Now or Never | ZERO Blog !</title>
+  <title>adb文件找不到问题 | ZERO Blog !</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <link rel="alternative" href="/atom.xml" title="ZERO Blog !" type="application/atom+xml">
@@ -85,14 +85,24 @@
     <div class="pure-g">
     <!-- article: meta -->
     <div class="pure-u-1-12 article-meta">
-      <div class="date"><time datetime="2015-01-11T15:28:30.000Z">
-        <div class="day">11</div>
+      <div class="date"><time datetime="2015-01-22T06:38:05.000Z">
+        <div class="day">22</div>
         <div class="month">1月 2015</div>
       </time></div>
       <div class="article-tags">
         
   
-    <a href='/tags/now-me-ok/' class='pure-button pull-right' style='margin:3px;'>now me, ok</a>
+    <a href='/tags/android-studio/' class='pure-button pull-right' style='margin:3px;'>android studio</a>
+  
+    <a href='/tags/android-SDK/' class='pure-button pull-right' style='margin:3px;'>android SDK</a>
+  
+    <a href='/tags/adb/' class='pure-button pull-right' style='margin:3px;'>adb</a>
+  
+    <a href='/tags/Ubuntu-14-04/' class='pure-button pull-right' style='margin:3px;'>Ubuntu 14.04</a>
+  
+    <a href='/tags/ia32-lib/' class='pure-button pull-right' style='margin:3px;'>ia32-lib</a>
+  
+    <a href='/tags/64b/' class='pure-button pull-right' style='margin:3px;'>64b</a>
   
 
 
@@ -104,14 +114,29 @@
       <header><div class="article-title">
         
   
-    <h1 class="title">持之以恒 ! Now or Never</h1>
+    <h1 class="title">adb文件找不到问题</h1>
   
 
       </div></header>
       <div class="article-entry">
         
-          <p>拟定目标,有所作为,<strong>持之以恒</strong>!,<a href="http://nowhug.me" target="_blank" rel="external">before i die</a></p>
-<p><img src="/img/keepdoing.jpg" alt="keepdoing"></p>
+          <p>安装64位版本的Ubuntu 14.04后,安装android SDK时可能会出现adb文件找不到的问题(我的笔记本并未出现这个问题..),但ls后明显可以看到存在adb文件.</p>
+<p>经查阅发现是由于ubuntu高版本默认丢弃了ia32-libs包所造成的.</p>
+<p>以下提供两种可行解决方案,<strong><em>方案一可行,方案二待测</em></strong>,方案三已经过时.</p>
+<h4 id="方案一(2015-1-22可行)">方案一(2015.1.22可行)</h4>
+<hr>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo -<span class="keyword">i</span></div><div class="line"><span class="keyword">cd</span> /etc/apt/sources.<span class="keyword">list</span>.<span class="keyword">d</span> </div><div class="line"><span class="keyword">echo</span> <span class="string">"deb http://old-releases.ubuntu.com/ubuntu raring main restricted universe multiverse"</span> &gt;ia32-libs-raring.<span class="keyword">list</span></div><div class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></div><div class="line">apt-<span class="built_in">get</span> install ia32-libs</div></pre></td></tr></table></figure>
+
+<p>执行以上代码结束,成功安装ia32-libs后,最好<code>rm ia32-libs-raring.list</code>删除该文件,然后执行<code>sudo apt-get update</code>.</p>
+<h4 id="方案二(待测)">方案二(待测)</h4>
+<hr>
+<p>lib32z1是ia32-libs的替代包,直接安装该包代替.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> apt-get install lib32z1</div></pre></td></tr></table></figure>
+
+<h4 id="方案三(过时)">方案三(过时)</h4>
+<hr>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo -<span class="keyword">i</span></div><div class="line"><span class="keyword">cd</span> /etc/apt/sources.<span class="keyword">list</span>.<span class="keyword">d</span> </div><div class="line"><span class="keyword">echo</span> <span class="string">"deb http://archieve.ubuntu.com/ubuntu raring main restricted universe multiverse"</span> &gt;ia32-libs-raring.<span class="keyword">list</span></div><div class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></div><div class="line">apt-<span class="built_in">get</span> install ia32-libs</div></pre></td></tr></table></figure>
+
 
         
       </div>
